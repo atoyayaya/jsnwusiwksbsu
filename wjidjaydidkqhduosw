@@ -101,6 +101,15 @@ game:GetService("UserInputService").JumpRequest:connect(function()
 end)
 end)
 
+Tab1Section:NewButton("挂机防检测", "点击后使用脚本挂机就不会被踢", function()
+    local vu = game:GetService("VirtualUser")
+	game:GetService("Players").LocalPlayer.Idled:connect(function()
+		vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+		wait(1)
+		vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+	end)
+end) 
+
 Tab1Section:NewTextBox("自定义速度", "可以自定义您的速度[请不要设置太高，否则会失效]", function(txt)
 	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = txt
 end)
@@ -116,7 +125,7 @@ end)
 local Tab1 = Window:NewTab("力量传奇")
 local Tab1Section = Tab1:NewSection("力量传奇[传送类]")
 
-Tab1Section:NewButton("传送到出生点", "点开即可传送到出生点", function()
+Tab1Section:NewButton("传送到出生点", "点击即可传送到出生点", function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(7, 3, 108)
 end)
 
@@ -144,7 +153,7 @@ Tab1Section:NewButton("传送到安全岛", "点击即可传送到安全岛", fu
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-39, 10, 1838)
 end)
 
-Tab1Section:NewButton("传送到幸运抽奖区域", "点开即可传送到幸运抽奖区域", function()
+Tab1Section:NewButton("传送到幸运抽奖区域", "点击即可传送到幸运抽奖区域", function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2606, -2, 5753)
 end)
 
@@ -163,27 +172,27 @@ end)
 local Tab1 = Window:NewTab("极速传奇")
 local Tab1Section = Tab1:NewSection("极速传奇[传送类]")
 
-Tab1Section:NewButton("传送到出生点", "点开即可传送到出生点", function()
+Tab1Section:NewButton("传送到出生点", "点击即可传送到出生点", function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-576.65087890625, 4.4557013511657715, 410.29931640625)
 end)
 
-Tab1Section:NewButton("传送到白雪城", "点开即可传送到白雪城", function()
+Tab1Section:NewButton("传送到白雪城", "点击即可传送到白雪城", function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-873.7782592773438, 4.505701065063477, 2160.809814453125)
 end)                
 
-Tab1Section:NewButton("传送到沙漠", "点开即可传送到沙漠", function()
+Tab1Section:NewButton("传送到沙漠", "点击即可传送到沙漠", function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2518.9970703125, 15.3969087600708, 4353.93359375)
 end)     
 
-Tab1Section:NewButton("传送到熔岩城", "点开即可传送到出生点", function()
+Tab1Section:NewButton("传送到熔岩城", "点击即可传送到出生点", function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1615.29296875, 4.555709362030029, 4331.70947265625)
 end)           
 
-Tab1Section:NewButton("传送到传奇公路", "点开即可传送到出生点", function()
+Tab1Section:NewButton("传送到传奇公路", "点击即可传送到出生点", function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3750.641845703125, 72.03562927246094, 5588.31201171875)
 end)        
 
-Tab1Section:NewButton("传送到开欧米茄区域", "点开即可传送到开欧米茄区域", function()
+Tab1Section:NewButton("传送到开欧米茄区域", "点击即可传送到开欧米茄区域", function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(4538.7578125, 75.03028106689453, 6409.03271484375)
 end)        
 
@@ -324,4 +333,19 @@ end)
 
 Tab1Section:NewButton("远程打开商店", "点击即可远程打开商店", function()
     game:GetService("Players").LocalPlayer.PlayerGui["Main_Gui"]["UpgradeMenu_Frame"].Visible = true
-end)
+end)        
+
+local Tab1 = Window:NewTab("忍者传奇")
+local Tab1Section = Tab1:NewSection("忍者传奇[功能类]")
+
+local Tab1 = Window:NewTab("超级力量格斗模拟器")
+local Tab1Section = Tab1:NewSection("超级力量格斗模拟器")
+
+Tab1Section:NewButton("自动锻炼力量", "点击后即可自动锻炼力量", function()
+    while true do
+		local A_1 = "Strength"
+		local Event = game:GetService("ReplicatedStorage").Events.Train
+		Event:FireServer(A_1)
+		wait (0,2)
+	end
+end) 
