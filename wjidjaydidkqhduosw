@@ -207,6 +207,14 @@ Tab1Section:NewButton("自动重生", "点击即可自动重生", function()
     game.ReplicatedStorage.rEvents.rebirthEvent:FireServer("rebirthRequest")
 end)    
 
+Tab1Section:NewToggle("自动进化", "开启之后所有可以进化的宠物都会自动进化", function(state)
+game.Replicatedstorage.rEvents.petEvolveEvent:FireServer("evolvePet", "all")
+end)
+
+Tab1Section:NewToggle("自动开欧米茄", "开启后自动开欧米茄，100k宝石一次", function(state)
+game.ReplicatedStorage.rEvents.openCrystalRemote:InvokeServer("openCrystal", "Electro Legends Crystal")
+end)
+
 local Tab1 = Window:NewTab("超级大力士模拟器")
 local Tab1Section = Tab1:NewSection("超级大力士模拟器[传送类]")
 
@@ -337,6 +345,69 @@ end)
 
 local Tab1 = Window:NewTab("忍者传奇")
 local Tab1Section = Tab1:NewSection("忍者传奇[功能类]")
+Tab1Section:NewButton("自动收集所有宝箱", "点击即可收集所有宝箱", function()
+    game:GetService("Workspace").mythicalChest["circleInner"].CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+wait(3.5)
+game:GetService("Workspace").goldenChest["circleInner"].CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+wait(3.5)
+game:GetService("Workspace").enchantedChest["circleInner"].CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+wait(3.5)
+game:GetService("Workspace").magmaChest["circleInner"].CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+wait(3.5)
+game:GetService("Workspace").legendsChest["circleInner"].CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+wait(3.5)
+game:GetService("Workspace").eternalChest["circleInner"].CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+wait(3.5)
+game:GetService("Workspace").saharaChest["circleInner"].CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+wait(3.5)
+game:GetService("Workspace").thunderChest["circleInner"].CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+wait(3.5)
+game:GetService("Workspace").ancientChest["circleInner"].CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+wait(3.5)
+game:GetService("Workspace").midnightShadowChest["circleInner"].CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+wait(3.5)
+game:GetService("Workspace").groupRewardsCircle["circleInner"].CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+wait(3.5)
+game:GetService("Workspace")["Daily Chest"].circleInner.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+wait(3.5)
+game:GetService("Workspace")["wonderChest"].circleInner.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+wait(3.5)
+game:GetService("Workspace").wonderChest["circleInner"].CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+game:GetService("Workspace").midnightShadowChest["circleInner"].CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+game:GetService("Workspace").ancientChest["circleInner"].CFrame = game.Workspace.Part.CFrame
+game:GetService("Workspace").midnightShadowChest["circleInner"].CFrame = game.Workspace.Part.CFrame
+game:GetService("Workspace").thunderChest["circleInner"].CFrame = game.Workspace.Part.CFrame
+game:GetService("Workspace").saharaChest["circleInner"].CFrame = game.Workspace.Part.CFrame
+game:GetService("Workspace").eternalChest["circleInner"].CFrame = game.Workspace.Part.CFrame
+game:GetService("Workspace").legendsChest["circleInner"].CFrame = game.Workspace.Part.CFrame
+game:GetService("Workspace").magmaChest["circleInner"].CFrame = game.Workspace.Part.CFrame
+game:GetService("Workspace").enchantedChest["circleInner"].CFrame = game.Workspace.Part.CFrame
+game:GetService("Workspace").goldenChest["circleInner"].CFrame = game.Workspace.Part.CFrame
+game:GetService("Workspace").mythicalChest["circleInner"].CFrame = game.Workspace.Part.CFrame
+game:GetService("Workspace").groupRewardsCircle["circleInner"].CFrame = game.Workspace.Part.CFrame
+game:GetService("Workspace")["Daily Chest"].circleInner.CFrame = game.Workspace.Part.CFrame
+end)        
+
+Tab1Section:NewButton("收集所有正义宝箱", "自动收集所有正义宝箱", function()
+    game:GetService("Workspace").lightKarmaChest["circleInner"].CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+wait(5)
+game:GetService("Workspace").lightKarmaChest["circleInner"].CFrame = game.Workspace.Part.CFrame
+end)        
+
+Tab1Section:NewButton("收集所有邪恶宝箱", "自动收集所有邪恶宝箱", function()
+    game:GetService("Workspace").evilKarmaChest["circleInner"].CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+wait(5)
+game:GetService("Workspace").evilKarmaChest["circleInner"].CFrame = game.Workspace.Part.CFrame
+end)        
+
+Tab1Section:NewButton("解锁所有岛屿", "点击即可解锁所有岛屿", function()
+    for i,v in next, game.workspace.islandUnlockParts:GetChildren() do 
+if v then 
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.islandSignPart.CFrame; 
+wait(.5)
+end
+end
+end) 
 
 local Tab1 = Window:NewTab("超级力量格斗模拟器")
 local Tab1Section = Tab1:NewSection("超级力量格斗模拟器")
