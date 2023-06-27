@@ -297,3 +297,31 @@ end)
 Tab1Section:NewButton("传送到矿场区域", "点击即可传送到矿场区域", function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(39.940277099609375, 11.31328296661377, 19015.275390625)
 end)        
+
+local Tab1 = Window:NewTab("举重模拟器")
+local Tab1Section = Tab1:NewSection("举重模拟器")
+
+Tab1Section:NewToggle("自动举重", "点击即可自动举重", function(state)
+toggle = state
+while toggle do wait()
+local ohTable1 = {
+	[1] = "GainMuscle"
+}
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(ohTable1)
+    end
+end)    
+
+Tab1Section:NewToggle("自动出售", "点击即可自动出售肌肉", function(state)
+tog = state
+   while tog do wait()
+local ohTable1 = {
+	[1] = "SellMuscle"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(ohTable1)
+    end
+end)
+
+Tab1Section:NewButton("远程打开商店", "点击即可远程打开商店", function()
+    game:GetService("Players").LocalPlayer.PlayerGui["Main_Gui"]["UpgradeMenu_Frame"].Visible = true
+end)
