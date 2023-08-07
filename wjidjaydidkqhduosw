@@ -491,11 +491,11 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-10324.1
 end)
 
 Tab1Section:NewButton("传送到沙滩", "点击即可传送到沙滩", function()
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-10274.5751953125, 3.909790515899658, -818.174560546875)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(11623.1533203125, 9.551749229431152, 25.513702392578125)
 end)
 
 Tab1Section:NewButton("传送到核弹", "点击即可传送到核弹", function()
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(11623.1533203125, 9.551749229431152, 25.513702392578125)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-10274.5751953125, 3.909790515899658, -818.174560546875)
 end)
 
 Tab1Section:NewButton("传送到恐龙世界", "点击即可传送到恐龙世界", function()
