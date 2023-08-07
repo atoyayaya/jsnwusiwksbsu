@@ -122,7 +122,7 @@ Tab1Section:NewTextBox("自定义重力", "可以自定义您的重力[重力为
 	game.Workspace.Gravity = txt
 end)
 
-local Tab1 = Window:NewTab("力量传奇")
+local Tab1 = Window:NewTab("力量传奇|muscle legend")
 local Tab1Section = Tab1:NewSection("力量传奇[传送类]")
 
 Tab1Section:NewButton("传送到出生点", "点击即可传送到出生点", function()
@@ -169,7 +169,7 @@ Tab1Section:NewToggle("自动杀人", "把所有人都吸到你所在的位置",
 		autokill()
 end)
 
-local Tab1 = Window:NewTab("极速传奇")
+local Tab1 = Window:NewTab("极速传奇|speed of legend")
 local Tab1Section = Tab1:NewSection("极速传奇[传送类]")
 
 Tab1Section:NewButton("传送到出生点", "点击即可传送到出生点", function()
@@ -215,7 +215,7 @@ Tab1Section:NewToggle("自动开欧米茄", "开启后自动开欧米茄，100k�
 game.ReplicatedStorage.rEvents.openCrystalRemote:InvokeServer("openCrystal", "Electro Legends Crystal")
 end)
 
-local Tab1 = Window:NewTab("超级大力士模拟器")
+local Tab1 = Window:NewTab("超级大力士模拟器|Strongman simulator")
 local Tab1Section = Tab1:NewSection("超级大力士模拟器[传送类]")
 
 Tab1Section:NewButton("传送到开始区域", "点击即可传送到开始区域", function()
@@ -315,7 +315,7 @@ Tab1Section:NewButton("传送到矿场区域", "点击即可传送到矿场区�
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(39.940277099609375, 11.31328296661377, 19015.275390625)
 end)        
 
-local Tab1 = Window:NewTab("举重模拟器")
+local Tab1 = Window:NewTab("举重模拟器|lifting simulator")
 local Tab1Section = Tab1:NewSection("举重模拟器")
 
 Tab1Section:NewToggle("自动举重", "点击即可自动举重", function(state)
@@ -343,7 +343,7 @@ Tab1Section:NewButton("远程打开商店", "点击即可远程打开商店", fu
     game:GetService("Players").LocalPlayer.PlayerGui["Main_Gui"]["UpgradeMenu_Frame"].Visible = true
 end)        
 
-local Tab1 = Window:NewTab("忍者传奇")
+local Tab1 = Window:NewTab("忍者传奇|ninja legend")
 local Tab1Section = Tab1:NewSection("忍者传奇[功能类]")
 Tab1Section:NewButton("自动收集所有宝箱", "点击即可收集所有宝箱", function()
     game:GetService("Workspace").mythicalChest["circleInner"].CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
@@ -420,3 +420,26 @@ Tab1Section:NewButton("自动锻炼力量", "点击后即可自动锻炼力量",
 		wait (0,2)
 	end
 end) 
+
+local Tab1 = Window:NewTab("武器模拟器2|weapons simulator2")
+local Tab1Section = Tab1:NewSection("武器模拟器2")
+
+Tab1Section:NewButton("获得力量", "自动快速获得力量，但升级时停止", function()
+local Event = game:service'Players'.LocalPlayer.Character.sword.Handle.pr.RemoteEvent
+game:service'RunService'.RenderStepped:Connect(function()
+for i = 1, 10 do
+Event:FireServer()
+end
+end)
+if Character:FindFirstChild("sword") then
+
+while wait() do
+Character.sword.Handle.pr.RemoteEvent:FireServer()
+if not Character:FindFirstChild("sword") then
+for _,v in pairs(Backpack:GetChildren()) do
+Humanoid:EquipTool(v)
+end
+end
+end
+end
+end)
