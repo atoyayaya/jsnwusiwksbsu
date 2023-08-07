@@ -1,5 +1,5 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/atoyayaya/uiwbsuianwhusw/main/usijwhduains"))()
-local Window = Library.CreateLib("暗脚本", "Ocean")
+local Window = Library.CreateLib("安脚本|永久免费", "Ocean")
 
 _G.autoweight = true
 
@@ -122,8 +122,8 @@ Tab1Section:NewTextBox("自定义重力", "可以自定义您的重力[重力为
 	game.Workspace.Gravity = txt
 end)
 
-local Tab1 = Window:NewTab("力量传奇|muscle legend")
-local Tab1Section = Tab1:NewSection("力量传奇[传送类]")
+local Tab1 = Window:NewTab("力量传奇")
+local Tab1Section = Tab1:NewSection("力量传奇[传送类]|muscle legend")
 
 Tab1Section:NewButton("传送到出生点", "点击即可传送到出生点", function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(7, 3, 108)
@@ -169,8 +169,8 @@ Tab1Section:NewToggle("自动杀人", "把所有人都吸到你所在的位置",
 		autokill()
 end)
 
-local Tab1 = Window:NewTab("极速传奇|speed of legend")
-local Tab1Section = Tab1:NewSection("极速传奇[传送类]")
+local Tab1 = Window:NewTab("极速传奇")
+local Tab1Section = Tab1:NewSection("极速传奇[传送类]|speed of legend")
 
 Tab1Section:NewButton("传送到出生点", "点击即可传送到出生点", function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-576.65087890625, 4.4557013511657715, 410.29931640625)
@@ -215,8 +215,8 @@ Tab1Section:NewToggle("自动开欧米茄", "开启后自动开欧米茄，100k�
 game.ReplicatedStorage.rEvents.openCrystalRemote:InvokeServer("openCrystal", "Electro Legends Crystal")
 end)
 
-local Tab1 = Window:NewTab("超级大力士模拟器|Strongman simulator")
-local Tab1Section = Tab1:NewSection("超级大力士模拟器[传送类]")
+local Tab1 = Window:NewTab("超级大力士模拟器")
+local Tab1Section = Tab1:NewSection("超级大力士模拟器[传送类]|Strongman simulator")
 
 Tab1Section:NewButton("传送到开始区域", "点击即可传送到开始区域", function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(85.86943817138672, 11.751949310302734, -198.07127380371094)
@@ -315,8 +315,8 @@ Tab1Section:NewButton("传送到矿场区域", "点击即可传送到矿场区�
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(39.940277099609375, 11.31328296661377, 19015.275390625)
 end)        
 
-local Tab1 = Window:NewTab("举重模拟器|lifting simulator")
-local Tab1Section = Tab1:NewSection("举重模拟器")
+local Tab1 = Window:NewTab("举重模拟器")
+local Tab1Section = Tab1:NewSection("举重模拟器|lifting simulator")
 
 Tab1Section:NewToggle("自动举重", "点击即可自动举重", function(state)
 toggle = state
@@ -343,8 +343,8 @@ Tab1Section:NewButton("远程打开商店", "点击即可远程打开商店", fu
     game:GetService("Players").LocalPlayer.PlayerGui["Main_Gui"]["UpgradeMenu_Frame"].Visible = true
 end)        
 
-local Tab1 = Window:NewTab("忍者传奇|ninja legend")
-local Tab1Section = Tab1:NewSection("忍者传奇[功能类]")
+local Tab1 = Window:NewTab("忍者传奇")
+local Tab1Section = Tab1:NewSection("忍者传奇[功能类]|ninja legend")
 Tab1Section:NewButton("自动收集所有宝箱", "点击即可收集所有宝箱", function()
     game:GetService("Workspace").mythicalChest["circleInner"].CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 wait(3.5)
@@ -410,7 +410,7 @@ end
 end) 
 
 local Tab1 = Window:NewTab("超级力量格斗模拟器")
-local Tab1Section = Tab1:NewSection("超级力量格斗模拟器")
+local Tab1Section = Tab1:NewSection("超级力量格斗模拟器|⚡️super power fighting simulator")
 
 Tab1Section:NewButton("自动锻炼力量", "点击后即可自动锻炼力量", function()
     while true do
@@ -421,8 +421,8 @@ Tab1Section:NewButton("自动锻炼力量", "点击后即可自动锻炼力量",
 	end
 end) 
 
-local Tab1 = Window:NewTab("武器模拟器2|weapons simulator2")
-local Tab1Section = Tab1:NewSection("武器模拟器2")
+local Tab1 = Window:NewTab("武器模拟器2")
+local Tab1Section = Tab1:NewSection("武器模拟器2|weapon simulator2")
 
 Tab1Section:NewButton("获得力量", "自动快速获得力量，但升级时停止", function()
 local Event = game:service'Players'.LocalPlayer.Character.sword.Handle.pr.RemoteEvent
