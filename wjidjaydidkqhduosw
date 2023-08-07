@@ -89,6 +89,41 @@ local GC = getconnections or get_signal_cons
 
 end
 
+Tab1Section:NewButton("复制作者b站号", "点击即可复制作者b站号", function()
+    setclipboard("1596915853")
+end)
+local GC = getconnections or get_signal_cons
+
+	if GC then
+
+		for i,v in pairs(GC(game.Players.LocalPlayer.Idled)) do
+
+			if v["Disable"] then
+
+				v["Disable"](v)
+ 
+			elseif v["Disconnect"] then
+
+				v["Disconnect"](v)
+
+			end
+
+		end
+
+	else
+
+		game.Players.LocalPlayer.Idled:Connect(function()
+
+			local VirtualUser = game:GetService("VirtualUser")
+
+			VirtualUser:CaptureController()
+
+			VirtualUser:ClickButton2(Vector2.new())
+
+	end)
+
+end
+
 local Tab1 = Window:NewTab("通用功能")
 local Tab1Section = Tab1:NewSection("通用功能")
 
