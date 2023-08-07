@@ -478,3 +478,26 @@ end
 end
 end
 end)
+
+local Tab1 = Window:NewTab("手臂摔跤模拟器")
+local Tab1Section = Tab1:NewSection("手臂摔跤模拟器|Arm wrestle simulator")
+
+Tab1Section:NewButton("传送到学校", "点击即可传送到学校", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-10249.0107421875, 3.82155442237854, 56.15304946899414)
+end)
+
+Tab1Section:NewButton("传送到健身房", "点击即可传送到健身房", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-10324.130859375, 3.8470542430877686, 637.7939453125)
+end)
+
+Tab1Section:NewButton("传送到沙滩", "点击即可传送到沙滩", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-10274.5751953125, 3.909790515899658, -818.174560546875)
+end)
+
+Tab1Section:NewButton("传送到核弹", "点击即可传送到核弹", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(11623.1533203125, 9.551749229431152, 25.513702392578125)
+end)
+
+Tab1Section:NewButton("传送到恐龙世界", "点击即可传送到恐龙世界", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-10307.32421875, -3.379154682159424, -1445.7559814453125)
+end)
