@@ -242,6 +242,26 @@ Tab1Section:NewButton("自动重生", "点击即可自动重生", function()
     game.ReplicatedStorage.rEvents.rebirthEvent:FireServer("rebirthRequest")
 end)    
 
+Tab1Section:NewButton("自动获得步数", "点击即可自动获得步数", function()
+for i=1, 7500 do
+     local A_1 = "collectOrb"
+local A_2 = "Red Orb"
+local A_3 = "City"
+local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent
+Event:FireServer(A_1, A_2, A_3)
+end
+end)
+
+Tab1Section:NewButton("自动获得宝石", "点击即可自动获得宝石", function()
+for i=1, 1000 do
+     local A_1 = "collectOrb"
+local A_2 = "Gem"
+local A_3 = "City"
+local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent
+Event:FireServer(A_1, A_2, A_3)
+end
+end)
+
 Tab1Section:NewToggle("自动进化", "开启之后所有可以进化的宠物都会自动进化", function(state)
 game.Replicatedstorage.rEvents.petEvolveEvent:FireServer("evolvePet", "all")
 end)
@@ -491,11 +511,11 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-10324.1
 end)
 
 Tab1Section:NewButton("传送到沙滩", "点击即可传送到沙滩", function()
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(11623.1533203125, 9.551749229431152, 25.513702392578125)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-10274.5751953125, 3.909790515899658, -818.174560546875)
 end)
 
 Tab1Section:NewButton("传送到核弹", "点击即可传送到核弹", function()
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-10274.5751953125, 3.909790515899658, -818.174560546875)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(11623.1533203125, 9.551749229431152, 25.513702392578125)
 end)
 
 Tab1Section:NewButton("传送到恐龙世界", "点击即可传送到恐龙世界", function()
