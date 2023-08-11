@@ -127,6 +127,10 @@ end
 local Tab1 = Window:NewTab("通用功能")
 local Tab1Section = Tab1:NewSection("通用功能")
 
+Tab1Section:NewButton("重进游戏", "点击即可重进该游戏", function()
+game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer)
+end)
+
 Tab1Section:NewButton("无限跳跃", "可以让您无限跳跃", function()
     local InfiniteJumpEnabled = true
 game:GetService("UserInputService").JumpRequest:connect(function()
@@ -521,3 +525,22 @@ end)
 Tab1Section:NewButton("传送到恐龙世界", "点击即可传送到恐龙世界", function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-10307.32421875, -3.379154682159424, -1445.7559814453125)
 end)
+
+local Tab1 = Window:NewTab("击倒模拟器")
+local Tab1Section = Tab1:NewSection("击倒模拟器|Knockout Simulator")
+
+Tab1Section:NewButton("无限力量", "点击即可获得无限力量", function()
+local args = {
+            [1] = 1e+30
+        }
+        
+        game:GetService("ReplicatedStorage"):WaitForChild("Event"):WaitForChild("Train"):FireServer(unpack(args)) 
+end)
+
+Tab1Section:NewButton("无限胜场", "点击即可获得无限胜场", function()
+local args = {
+            [1] = 1e+30
+        }
+        
+        game:GetService("ReplicatedStorage"):WaitForChild("Event"):WaitForChild("WinGain"):FireServer(unpack(args))        
+end)        
